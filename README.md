@@ -32,7 +32,7 @@ assert(handle.get() == 2);
 ### Interface
 Interface is mostly the same as `std::unique_ptr` with minor changes.
 There's no operator->(), operator[], get_deleter(), no constructor/reset
-from unique_rsrc with convertible type. `make_unique_rsrc` is playing the role 
+from unique_rsrc with convertible type. `make_unique_rsrc` is playing role 
 of `std::make_unique`.
 #### Member functions
 ```c++
@@ -50,7 +50,7 @@ value_type release() noexcept;
 value_type operator*() const noexcept;
 void swap(unique_rsrc& other) noexcept;
 ```
-### Non-member functions
+#### Non-member functions
 ```c++
 unique_rsrc<traits> make_unique_rsrc<traits>(args...);
 
